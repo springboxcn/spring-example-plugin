@@ -1,8 +1,5 @@
 package cn.springbox.example.collection.plugin.loadconfig;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.net.URL;
@@ -17,7 +14,7 @@ public class Main {
             Enumeration<URL> enumeration = classLoader.getResources("META-INF/config.properties");
             while (enumeration.hasMoreElements()) {
                 URL url = enumeration.nextElement();
-                InputStream is = new BufferedInputStream(new FileInputStream(new File(url.toURI())));
+                InputStream is = url.openStream();
                 Properties p = new Properties();
                 p.load(is);
                 String configClassName = p.getProperty("key");
