@@ -12,6 +12,7 @@
 
 # Package Files #
 *.jar
+!load-config-test/lib/*.jar
 *.war
 *.nar
 *.ear

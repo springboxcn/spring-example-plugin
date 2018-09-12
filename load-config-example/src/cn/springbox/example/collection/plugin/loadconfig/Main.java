@@ -22,6 +22,9 @@ public class Main {
                 Field field = clazz.getDeclaredField("key");
                 field.setAccessible(true);
                 System.out.println(field.get(clazz));
+                if (null != is) {
+                    is.close();
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
