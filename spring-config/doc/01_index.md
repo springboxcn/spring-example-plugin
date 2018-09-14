@@ -2,7 +2,7 @@
 
 SpringApplication.run(String... args)
 
-```
+```Java
 public ConfigurableApplicationContext run(String... args) {
 // 01-01 加载 Listener
 SpringApplicationRunListeners listeners = getRunListeners(args);
