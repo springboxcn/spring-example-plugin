@@ -2,21 +2,14 @@
 
 SpringApplication.run(String... args)
 
-
+```
 public ConfigurableApplicationContext run(String... args) {
-
-<details>
-  <summary>这里去加载 `Listener`</summary>
-  test
-</details>
-
+// 01-01 加载 Listener
 SpringApplicationRunListeners listeners = getRunListeners(args);
 listeners.starting();
 try {
-    ApplicationArguments applicationArguments = new DefaultApplicationArguments(
-            args);
-    ConfigurableEnvironment environment = prepareEnvironment(listeners,
-            applicationArguments);
+    ApplicationArguments applicationArguments = new DefaultApplicationArguments(args);
+    ConfigurableEnvironment environment = prepareEnvironment(listeners, applicationArguments);
     configureIgnoreBeanInfo(environment);
     Banner printedBanner = printBanner(environment);
     context = createApplicationContext();
@@ -49,4 +42,10 @@ catch (Throwable ex) {
 }
 return context;
 }
+```
+
+- 加载 `Listener`
+
+
+
 
