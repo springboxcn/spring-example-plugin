@@ -44,14 +44,18 @@ return context;
 }
 ```
 
-- 01-01 加载 `Listener`
+### 01-01 加载 `Listener`
 
-  调用关系树
-
+  #### 调用关系树
+  
+  ```
   - getRunListeners
     - getSpringFactoriesInstances
       - SpringFactoriesLoader.loadFactoryNames 
         - loadFactoryNames
           - loadSpringFactories  
-          
-  这里回去查找所有 jar 下面的 `META-INF/spring.factories` 文件          
+  ```          
+  这里回去查找所有 jar 下面的 `META-INF/spring.factories` 文件
+  
+  #### spring.factories 文件解读
+             
