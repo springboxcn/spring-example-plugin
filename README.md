@@ -1,6 +1,6 @@
 # spring-example-plugin
 
-## export jar for idea  
+## export jar for idea
 
 https://blog.csdn.net/ouyang111222/article/details/73105086
 
