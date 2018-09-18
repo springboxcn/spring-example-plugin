@@ -1,4 +1,4 @@
-# spring-example-plugin 
+# spring-example-plugin
 
 ## export jar for idea
 
